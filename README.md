@@ -1,7 +1,7 @@
 <h1 align="center">💻 Hackintosh ThinkPad T470s 💻<h1>
-<div style="text-align:center"><img src="./Images/opencore-t470S.png" alt="Lenovo Thinkpad T470S macOS Hackintosh OpenCore" />
-  </div>
-  
+<p align="center">
+  <img width="460" height="300" src="./Images/opencore-t470S.png" alt="Lenovo Thinkpad T470S macOS Hackintosh OpenCore" />
+</p>
 
 <h3 align="center" style="font-style:italic; color: grey">OpenCore EFI pour ThinkPad T470s</h3>
 <br>
