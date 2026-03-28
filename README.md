@@ -1,80 +1,93 @@
-<h1 align="center">💻 Hackintosh ThinkPad T470s 💻<h1>
+# Hackintosh — Lenovo ThinkPad T470s
+
 <p align="center">
-  <img width="460" height="300" src="./Images/opencore-t470S.png" alt="Lenovo Thinkpad T470S macOS Hackintosh OpenCore" />
+  <img width="460" height="300" src="./Images/opencore-t470S.png" alt="Lenovo ThinkPad T470s macOS Hackintosh OpenCore" />
 </p>
 
-<h3 align="center" style="font-style:italic; color: grey">OpenCore EFI pour ThinkPad T470s</h3>
-<br>
 <p align="center">
-  <img src="https://img.shields.io/badge/Compatibilité-BigSur%20%7C%20Monterey-purple.svg?style=flat" />
-</p>
-  <p align="center">
-    <a target="__blank" href="https://developer.apple.com/documentation/macos-release-notes">
-  <img src="https://img.shields.io/badge/MacOS-12.2-maroon.svg?style=flat" />
-    </a>
-    <a target="__blank" href="https://github.com/acidanthera/OpenCorePkg">
-      <img src="https://img.shields.io/badge/OpenCore-0.7.7-darkblue.svg?style=flat">
-    </a>
-    <a target="__blank" href="https://pcsupport.lenovo.com/fr/fr/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t470s">
-      <img src="https://img.shields.io/badge/Model-20HF|20HG-darkcyan?style=flat">
-    </a>
-    <a target="__blank" href="https://travis-ci.org/IceEnd/Yosoro">
-      <img src="https://img.shields.io/badge/BIOS-1.42-goldenrod?style=flat">
-    </a>
-  </p>
-  <p align="center">
-    <a target="__blank" href="https://https://github.com/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s/releases">
-      <img src="https://img.shields.io/github/release/iceend/yosoro.svg?style=flat" />
-    </a>
-    <a target="__blank" href="https://https://github.com/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s/releases">
-      <img src="https://img.shields.io/github/downloads/IceEnd/Yosoro/total.svg?style=flat">
-    </a>
-    <a target="__blank" href="https://https://github.com/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s/blob/master/LICENSE">
-      <img src="https://img.shields.io/badge/license-MIT-forestgreen" />
-    </a>
-  </p>
+  <img src="https://img.shields.io/badge/macOS-Monterey%20%7C%20Ventura-blueviolet?style=flat&logo=apple" alt="macOS Compatibility" />
+  <a href="https://github.com/acidanthera/OpenCorePkg">
+    <img src="https://img.shields.io/badge/OpenCore-0.9.x-blue?style=flat&logo=apple" alt="OpenCore" />
+  </a>
+  <a href="https://github.com/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s/releases">
+    <img src="https://img.shields.io/github/v/release/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s?style=flat&label=Release" alt="Latest Release" />
+  </a>
+  <a href="https://github.com/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s?style=flat" alt="License" />
+  </a>
+  <a href="https://github.com/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s/releases">
+    <img src="https://img.shields.io/github/downloads/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s/total?style=flat" alt="Downloads" />
+  </a>
 </p>
 
-</br>
-<h3 align="center">⚠️ CLAUSE DE NON-RESPONSABILITÉ ⚠️</h3>
-<p align="center">
-Lisez l'intégralité du README avant de commencer à faire quoi que ce soit.
-<p>
-<p align="center">
-Un Hackintoshing est dangereux et peut ruiner votre matériel de façon permanente si vous ne savez pas ce que vous faites !
-<p>
-<p align="center">
-Les ressources que vous trouverez ici ne sont fournis qu'à titre de curiosité académique, la réalisation d'un Hackintosh se fait à vos propres risques et péril.
-<p>
-<p align="center">
-Je n’assume ni la responsabilité pour les dommages que vous pourriez causer, ni les utilisations détournés que vous pourriez en faire, quels qu’ils soient.
-</p>
-<p align="center">
-En aucune manière je ne posséde les droits sur ses éléments, tout appartient à Apple/Lenovo/OpenCore Team.
-</p>
-<p>
-</p>
-</br>
+---
 
-## Introduction
+OpenCore EFI configuration for running macOS on the Lenovo ThinkPad T470s (model 20HF/20HG).
 
-<details>  
-<summary><strong>Pour commencer 📖</strong></summary>
-</br>
-**Prise en main du bootloader:**
+## Hardware Specs
 
-- [Pourquoi OpenCore](https://dortania.github.io/OpenCore-Install-Guide/why-oc.html)
-- [Site web de Dortania](https://dortania.github.io)
+| Component | Details |
+|-----------|---------|
+| **CPU** | Intel Core i5-7300U / i7-7600U (Kaby Lake) |
+| **GPU** | Intel HD Graphics 620 |
+| **RAM** | 8 GB / 16 GB / 24 GB DDR4 2133 MHz |
+| **Storage** | M.2 2280 NVMe / SATA SSD |
+| **Display** | 14" FHD (1920x1080) IPS |
+| **Audio** | Realtek ALC3245 (ALC298) |
+| **Ethernet** | Intel I219-V |
+| **Wi-Fi** | Intel AC 8265 (replace recommended) or Broadcom BCM94360NG |
+| **Bluetooth** | Intel / Broadcom (matches Wi-Fi card) |
+| **BIOS** | 1.42+ |
 
-**Outils recommandés :**
+## Compatibility
 
-- Plist editor [ProperTree](https://github.com/corpnewt/ProperTree)
-- Handy-dandy ESP mounting script [MountEFI](https://github.com/corpnewt/MountEFI)
+| Feature | Status |
+|---------|--------|
+| **macOS Monterey (12.x)** | Supported |
+| **macOS Ventura (13.x)** | Supported |
+| **Display & Brightness** | Working |
+| **Audio (speakers + headphone jack)** | Working |
+| **USB ports (2.0 / 3.0)** | Working |
+| **Ethernet** | Working |
+| **Battery & power management** | Working |
+| **Keyboard & TrackPoint** | Working |
+| **Trackpad (with gestures)** | Working |
+| **Sleep / Wake** | Working |
+| **iServices (iMessage, FaceTime)** | Requires valid SMBIOS |
+| **Thunderbolt 3 hotplug** | Not working |
+| **Fingerprint reader** | Not working |
+| **WWAN (LTE module)** | Not working |
+| **SD card reader** | Not working |
 
-**Ressources**
+## Installation
 
-- [OpenCore](https://github.com/acidanthera/OpenCorePkg)
+### Prerequisites
 
-</details>
+- A USB drive (16 GB+)
+- A macOS installer image (Monterey or Ventura)
+- [ProperTree](https://github.com/corpnewt/ProperTree) for plist editing
+- [MountEFI](https://github.com/corpnewt/MountEFI) for EFI partition mounting
 
-</details>
+### Steps
+
+1. Create a bootable macOS USB installer using [Dortania's guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/).
+2. Download the latest EFI release from this repository's [Releases page](https://github.com/Asteerix/Hackintosh-Lenovo-Thinkpad-T470s/releases).
+3. Mount the EFI partition of your USB drive and copy the `EFI` folder to it.
+4. **Generate your own SMBIOS** using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) (model: `MacBookPro14,1`). Do NOT use the included serial numbers.
+5. Configure BIOS settings as recommended by [Dortania](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#intel-bios-settings).
+6. Boot from USB and install macOS.
+7. After installation, copy the EFI folder to your internal drive's EFI partition.
+
+## Resources
+
+- [OpenCore Documentation](https://dortania.github.io/OpenCore-Install-Guide/)
+- [OpenCore GitHub](https://github.com/acidanthera/OpenCorePkg)
+- [Dortania Guides](https://dortania.github.io)
+
+## Disclaimer
+
+This repository is provided for educational purposes only. Hackintoshing may void your warranty and carries the risk of damaging your hardware. Use at your own risk. All trademarks belong to their respective owners (Apple, Lenovo, Intel, etc.).
+
+## License
+
+See [LICENSE](./LICENSE) for details.
